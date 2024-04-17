@@ -84,4 +84,5 @@ window.onload = () => {
     });
   };
 
+
 export default Hero;

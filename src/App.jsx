@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Hero from './components/Hero.jsx'
+import CustomCursor from './components/CustomCursor.jsx'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <CustomCursor />
       <Hero />
     </>
   )
