@@ -1,13 +1,10 @@
 import React from "react";
 
-
 import WomanHero from "../img/woman_hero.png";
 import leaf from "../img/leaf.png";
 import gsap from "gsap";
 
 import { Link } from "react-router-dom";
-
-
 
 const Hero = () => {
   return (
@@ -15,18 +12,15 @@ const Hero = () => {
       className="bg-pink-200 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24"
       id="heroPage"
     >
-    {/* top leaves */}
+      {/* top leaves */}
       <div className="absolute z-10 leaf -mt-[120px] ml-[180px] rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-
       <div className="absolute z-10 leaf mt-[30px] ml-[70px] rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
-
       {/* middle leaves*/}
-
       <div className="absolute z-10 leaf mt-[350px] ml-[420px] -rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
@@ -35,7 +29,6 @@ const Hero = () => {
       </div>
 
       {/* bottom */}
-
       <div className="absolute z-10 leaf mt-[520px] ml-[30px] -rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
@@ -43,15 +36,13 @@ const Hero = () => {
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
-
-    {/* right bottom leaves */}
+      {/* right bottom leaves */}
       <div className="absolute z-10 leaf mt-[450px] ml-[1350px] rotate-180 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
       <div className="absolute z-10 leaf mt-[520px] ml-[1300px] -rotate-90 scale-75 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-      
 
       {/* bg */}
       <div className="container mx-auto flex justify-around h-full z-20">
@@ -65,24 +56,29 @@ const Hero = () => {
           </h1>
         </div>
         <div className="hidden lg:block z-30">
-          <img src={WomanHero} alt="womanHero" className="z-30"/>
+          <img src={WomanHero} alt="womanHero" className="z-30" />
         </div>
       </div>
+
+      <section id="section05" className="demo">
+        <a href="#products">
+          <span></span>
+        </a>
+      </section>
     </section>
   );
 };
 
 window.onload = () => {
-    const heroPage = document.querySelector("#heroPage");
-    const leafMove = document.querySelectorAll(".leaf");
-  
-    heroPage.addEventListener("mousemove", function (dets) {
-      gsap.to(leafMove, {
-        x: -(dets.x)/30,
-        y: -(dets.y)/30,
-      });
-    });
-  };
+  const heroPage = document.querySelector("#heroPage");
+  const leafMove = document.querySelectorAll(".leaf");
 
+  heroPage.addEventListener("mousemove", function (dets) {
+    gsap.to(leafMove, {
+      x: -dets.x / 30,
+      y: -dets.y / 30,
+    });
+  });
+};
 
 export default Hero;
