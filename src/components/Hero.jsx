@@ -15,22 +15,57 @@ const Hero = () => {
       className="bg-pink-200 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24"
       id="heroPage"
     >
-    
-      <div className="fixed z-9 -mt-30" id = "leaf">
+    {/* top leaves */}
+      <div className="absolute z-10 leaf -mt-[120px] ml-[180px] rotate-90">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-      <div className="container mx-auto flex justify-around h-full z-10">
-        <div className="flex flex-col justify-center">
+
+      <div className="absolute z-10 leaf mt-[30px] ml-[70px] rotate-90">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+
+
+      {/* middle leaves*/}
+
+      <div className="absolute z-10 leaf mt-[350px] ml-[420px] -rotate-90">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+      <div className="absolute z-10 leaf mt-[400px] ml-[500px] scale-50 -rotate-45">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+
+      {/* bottom */}
+
+      <div className="absolute z-10 leaf mt-[520px] ml-[30px] -rotate-90">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+      <div className="absolute z-10 leaf mt-[450px] ml-[140px] scale-50">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+
+
+    {/* right bottom leaves */}
+      <div className="absolute z-10 leaf mt-[450px] ml-[1350px] rotate-180">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+      <div className="absolute z-10 leaf mt-[520px] ml-[1300px] -rotate-90 scale-75">
+        <img src={leaf} alt="leaf" className="w-20" />
+      </div>
+      
+
+      {/* bg */}
+      <div className="container mx-auto flex justify-around h-full z-20">
+        <div className="flex flex-col justify-center z-20">
           <div className="font-semibold flex items-center uppercase">
             <div className="w-10 h-[2px] bg-red-500 mr-3"></div>New Trend
           </div>
-          <h1 className="text-[70px] leading-1.1 font-light mb-4">
+          <h1 className="text-[70px] leading-1.1 font-light mb-4 z-20">
             AUTUMN SALE STYLISH <br />
-            <span className="font-semibold">WOMENS</span>
+            <span className="font-semibold z-20">WOMENS</span>
           </h1>
         </div>
-        <div className="hidden lg:block ">
-          <img src={WomanHero} alt="womanHero" />
+        <div className="hidden lg:block z-30">
+          <img src={WomanHero} alt="womanHero" className="z-30"/>
         </div>
       </div>
     </section>
@@ -39,12 +74,12 @@ const Hero = () => {
 
 window.onload = () => {
     const heroPage = document.querySelector("#heroPage");
-    const leafMove = document.querySelectorAll("#leaf");
+    const leafMove = document.querySelectorAll(".leaf");
   
     heroPage.addEventListener("mousemove", function (dets) {
       gsap.to(leafMove, {
-        x: (dets.x)/50,
-        y: (dets.y)/50,
+        x: -(dets.x)/50,
+        y: -(dets.y)/50,
       });
     });
   };
