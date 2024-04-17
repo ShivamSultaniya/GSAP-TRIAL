@@ -16,39 +16,39 @@ const Hero = () => {
       id="heroPage"
     >
     {/* top leaves */}
-      <div className="absolute z-10 leaf -mt-[120px] ml-[180px] rotate-90">
+      <div className="absolute z-10 leaf -mt-[120px] ml-[180px] rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
-      <div className="absolute z-10 leaf mt-[30px] ml-[70px] rotate-90">
+      <div className="absolute z-10 leaf mt-[30px] ml-[70px] rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
 
       {/* middle leaves*/}
 
-      <div className="absolute z-10 leaf mt-[350px] ml-[420px] -rotate-90">
+      <div className="absolute z-10 leaf mt-[350px] ml-[420px] -rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-      <div className="absolute z-10 leaf mt-[400px] ml-[500px] scale-50 -rotate-45">
+      <div className="absolute z-10 leaf mt-[400px] ml-[500px] scale-50 -rotate-45 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
       {/* bottom */}
 
-      <div className="absolute z-10 leaf mt-[520px] ml-[30px] -rotate-90">
+      <div className="absolute z-10 leaf mt-[520px] ml-[30px] -rotate-90 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-      <div className="absolute z-10 leaf mt-[450px] ml-[140px] scale-50">
+      <div className="absolute z-10 leaf mt-[450px] ml-[140px] scale-50 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
 
 
     {/* right bottom leaves */}
-      <div className="absolute z-10 leaf mt-[450px] ml-[1350px] rotate-180">
+      <div className="absolute z-10 leaf mt-[450px] ml-[1350px] rotate-180 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
-      <div className="absolute z-10 leaf mt-[520px] ml-[1300px] -rotate-90 scale-75">
+      <div className="absolute z-10 leaf mt-[520px] ml-[1300px] -rotate-90 scale-75 opacity-55">
         <img src={leaf} alt="leaf" className="w-20" />
       </div>
       
@@ -78,8 +78,8 @@ window.onload = () => {
   
     heroPage.addEventListener("mousemove", function (dets) {
       gsap.to(leafMove, {
-        x: -(dets.x)/50,
-        y: -(dets.y)/50,
+        x: -(dets.x)/30,
+        y: -(dets.y)/30,
       });
     });
   };
